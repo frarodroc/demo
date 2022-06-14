@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+	@Value("${USERNAME}")
+	private String username;
+
 	@GetMapping("/")
 	public String index() {
-		String password = System.getenv("PASSWORD");
-		return "My password is: " + password;
+		return "My username is: " + username;
 	}
 
 }
