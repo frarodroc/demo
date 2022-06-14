@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-	@Value("${USERNAME}")
-	private String username;
+	@Value("${MI_PROPIEDAD}")
+	private String property;
 
 	@GetMapping("/")
 	public String index() {
-		return "My username is: " + username;
+		return "My property is: " + property;
 	}
 
 }
